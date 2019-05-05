@@ -4,7 +4,7 @@ import styles from './NavItem.module.scss';
 export const NavItem = (props: NavItemProps) => {
   return (
     <div className={`level-item ${styles.navItem}`}>
-      <a className="is-size-6" href={props.route}>{props.title}</a>
+      <a className="is-size-5" href={props.route}>{props.title}</a>
     </div>
   );
 };

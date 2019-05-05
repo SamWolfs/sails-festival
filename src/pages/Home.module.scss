@@ -29,3 +29,22 @@
     text-align: start;
     font-size: 20px;
 }
+
+.lineupCarousel:nth-child() {
+    margin-top: 20px;
+}
+
+.subtitle {
+    display: inline-block;
+    align-self: flex-start;
+    h2 {
+        color: white;
+        font-size: 48px;
+        text-align: start;
+    }
+
+    hr {
+        width: 50%;
+        margin: 12px;
+    }
+}

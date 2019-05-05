@@ -1,6 +1,6 @@
 import * as React from "react";
-import logo from "../../images/sails-logo.png";
-import name from "../../images/sails-name.png";
+import logo from "../../assets/images/sails-logo.png";
+import name from "../../assets/images/sails-name.png";
 import styles from "./SailsLogo.module.scss";
 import { Link } from 'react-router-dom';
 

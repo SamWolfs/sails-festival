@@ -1,0 +1,41 @@
+.polaroidContainer {
+    height: 425px;
+    width: 350px;
+    padding: 25px;
+    background-color: white;
+
+    margin: 8px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover .polaroidImage {
+        transform: scale(1.1);
+    }
+}
+
+.imageWrapper {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.polaroidImage {
+    display: block;
+    max-height: 300px;
+    max-width: 300px;
+    transition: 1s;
+}
+
+.polaroidTitle {
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+    margin-top: 15px;
+    height: 50px;
+    font-size: 35px;
+}
+
