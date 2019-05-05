@@ -1,0 +1,31 @@
+.bannerContainer {
+    color: white;
+    margin: 100px 0px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bannerColumn {
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bannerLogo {
+    width: 150px;
+}
+
+.bannerTitle {
+    padding: 0px;
+    margin: 0px;
+    font-size: 70px;
+}
+
+.bannerInfo {
+    line-height: 1;
+    text-align: start;
+    font-size: 20px;
+}

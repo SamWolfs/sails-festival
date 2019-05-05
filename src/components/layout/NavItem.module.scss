@@ -1,0 +1,13 @@
+.navItem > a::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.navItem > a:hover::after {
+    width: 100%;
+    background: white;
+}
