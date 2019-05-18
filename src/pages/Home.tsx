@@ -4,6 +4,7 @@ import styles from "./Home.module.scss";
 import { Polaroid, PolaroidProps } from "../components/Polaroid";
 import Slider from "react-slick";
 import artists from "../assets/data/lineup.json";
+import { StringDecoder } from "string_decoder";
 
 export const Home = () => {
   return (
@@ -40,15 +41,19 @@ const LineupCarousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
+    lazyload: true,
     autoplaySpeed: 2500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 3,
+    centerMode: true,
+    centerPadding: '25px',
+    arrows: false
   };
   return (
     <Slider className={styles.lineupCarousel} {...settings}>
         {artists.map((artist: PolaroidProps) => (
-        <Polaroid name={artist.name} image={artist.image}/>
+          <Polaroid key={artist.name} name={artist.name} image={artist.image}/>
         ))}
     </Slider>
   );
