@@ -1,0 +1,38 @@
+.cardBody {
+  margin: 10px 0px;
+  padding: 10px;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  border: 3px solid white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.lineupImage {
+    width: 300px;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+    margin: 0px 10px;
+}
+
+.playlistContainer {
+    display: inline-block;
+    width: 300px;
+}
+
+.playlist {
+    flex: 1;
+    margin: auto;
+    width: 300px;
+    height: 80px;
+}
