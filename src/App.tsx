@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { Home } from './pages/Home';
-import { Lineup } from './pages/Lineup';
+// import { Lineup } from './pages/Lineup';
 import { Layout } from './components/Layout';
 import { Switch, Route } from 'react-router';
 import { library } from '@fortawesome/fontawesome-svg-core'
