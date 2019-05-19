@@ -4,7 +4,6 @@ import styles from "./Home.module.scss";
 import { Polaroid, PolaroidProps } from "../components/Polaroid";
 import Slider from "react-slick";
 import artists from "../assets/data/lineup.json";
-import { StringDecoder } from "string_decoder";
 
 export const Home = () => {
   return (
@@ -44,26 +43,54 @@ const LineupCarousel = () => {
     autoplay: true,
     lazyload: true,
     autoplaySpeed: 2500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    centerMode: true,
-    centerPadding: '25px',
-    arrows: false
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <Slider className={styles.lineupCarousel} {...settings}>
-        {artists.map((artist: PolaroidProps) => (
-          <Polaroid key={artist.name} name={artist.name} image={artist.image}/>
-        ))}
+      {artists.map((artist: PolaroidProps) => (
+        <Polaroid key={artist.name} name={artist.name} image={artist.image} />
+      ))}
     </Slider>
   );
 };
 
-const Subtitle = (props:any) => {
-    return (
-        <div className={styles.subtitle}>
-            <h2>{props.text}</h2>
-            <hr />
-        </div>
-    );
-}
+const Subtitle = (props: any) => {
+  return (
+    <div className={styles.subtitle}>
+      <h2>{props.text}</h2>
+      <hr />
+    </div>
+  );
+};

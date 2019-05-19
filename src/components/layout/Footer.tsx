@@ -12,7 +12,7 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className={`level ${styles.container}`}>
+      <div className={`level is-mobile ${styles.container}`}>
         <div className="level-item">
           {socialPlatforms.map((button: SocialButtonProps) => {
             return <SocialButton {...button} />
