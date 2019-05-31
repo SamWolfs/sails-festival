@@ -1,3 +1,5 @@
+@import '_globals';
+
 body {
   background-image: url("assets/images/sails-bg.jpg");
   background-repeat: no-repeat;
@@ -21,7 +23,7 @@ code {
 
 a, a:hover {
   text-decoration: none;
-  color: white !important;
+  color: $sails-text !important;
   padding-bottom: 3px;
 }
 
