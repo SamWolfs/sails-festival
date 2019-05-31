@@ -1,10 +1,11 @@
 import * as React from "react";
 import styles from './NavItem.module.scss';
+import { NavLink } from "react-router-dom";
 
 export const NavItem = (props: NavItemProps) => {
   return (
     <div className={`level-item ${styles.navItem}`}>
-      <a className="is-size-5" href={props.route}>{props.title}</a>
+      <NavLink className="is-size-5" activeClassName={styles.linkActive} to={props.route}>{props.title}</NavLink>
     </div>
   );
 };
