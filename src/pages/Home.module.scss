@@ -1,50 +1,101 @@
+@import "src/_globals";
+
 .bannerContainer {
-    color: white;
-    margin: 100px 0px;
-    height: 200px;
-    display: flex;
+  color: $sails-text;
+  margin: 100px 0px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 767px){
+  .bannerContainer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .container {
     flex-direction: row;
-    justify-content: center;
+  }
 }
 
 .bannerColumn {
-    margin: 0px 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 .bannerLogo {
-    width: 150px;
+  margin: auto;
+  width: 150px;
 }
 
 .bannerTitle {
-    padding: 0px;
-    margin: 0px;
-    font-size: 70px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 70px;
 }
 
 .bannerInfo {
-    line-height: 1;
-    text-align: start;
-    font-size: 20px;
+  line-height: 1;
+  text-align: start;
+  font-size: 20px;
 }
 
 .lineupCarousel:nth-child() {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .subtitle {
-    display: inline-block;
-    align-self: flex-start;
-    h2 {
-        color: white;
-        font-size: 48px;
-        text-align: start;
-    }
+  display: inline-block;
+  align-self: flex-start;
+  h2 {
+    color: $sails-text;
+    font-size: 48px;
+    text-align: start;
+  }
 
-    hr {
-        width: 50%;
-        margin: 12px;
+  hr {
+    width: 50%;
+    margin: 12px;
+  }
+}
+
+.separator {
+  height: 100px;
+}
+
+.playlistContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  
+  @media only screen and (max-width: 767px){
+    .tabsContainer {
+      width: 100%;
     }
+  }
+  
+  @media only screen and (min-width: 768px){
+    .tabsContainer {
+      width: 50%;
+    }
+  }
+
+  .tabsContainer {
+    margin: 25px auto;
+  }
+
+  a * {
+    margin: 5px;
+  }
+}
+
+.ytPlayer {
+  height: 360px;
+  width: 640px;
 }
