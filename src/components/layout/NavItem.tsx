@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const NavItem = (props: NavItemProps) => {
   return (
-    <div className={`level-item ${styles.navItem}`}>
+    <div className={`navbar-item ${styles.navItem}`}>
       <NavLink className="is-size-5" activeClassName={styles.linkActive} to={props.route}>{props.title}</NavLink>
     </div>
   );
