@@ -183,7 +183,7 @@ const SponsorCarousel = () => {
       {sponsors.map((sponsor: SponsorProps, index: number) => {
         let offset = index % 2 === 0 ? "0 20px 0 0" : "0px";
         return (
-          <a style={{ margin: offset }} href={sponsor.url}>
+          <a key={sponsor.name} style={{ margin: offset }} href={sponsor.url}>
             <img src={sponsor.logo} alt={sponsor.name} />
           </a>
         );

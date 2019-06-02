@@ -1,3 +1,5 @@
+@import 'src/_globals';
+
 .title {
   text-align: left;
   color: white;
@@ -5,84 +7,91 @@
   padding: 72px 0px;
 }
 
-.cardBody {
-  margin: 10px 0px;
-  padding: 10px;
-  height: 350px;
-  width: 100%;
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .detailContainer {
+    width: 0;
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .detailContainer {
+    border: 3px solid white;
+    color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    position: sticky;
+    top: 50px;
+    z-index: 10;
+    width: 325px;
+    h3 {
+      font-size: 32px;
+    }
+  }
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.socialsContainer {
   display: flex;
   flex-direction: row;
   align-content: center;
-  border: 3px solid white;
-}
-
-.isReverse {
-  flex-direction: row-reverse;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .lineupImage {
-  width: 300px;
+  width: 275px;
 }
 
 .descriptionContainer {
+  text-align: justify;
   display: flex;
   flex: 1;
   flex-direction: column;
-  color: white;
   margin: 0px 10px;
 }
 
-.artist {
-  display: inline-block;
-  align-self: flex-start;
-  flex: 0;
-  h3 {
-      color: white;
-      font-size: 32px;
-      text-align: start;
-  }
-  hr {
-      width: 50%;
-      margin-top: 0 !important;
-      margin-bottom: 10px;
-  }
-}
-
-.description {
-  text-align: justify;
-  font-size: 20px;
-  overflow: hidden;
-}
-
-.playlistContainer {
+.artistContainer {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  width: 300px;
+  margin: 5px;
+}
+
+.artistName {
+  position: relative;
+  color: $sails-text;
+  background: $sails-accent;
+  opacity: 0.6;
+  width: 225px;
+  font-size: 26px;
+  border: solid $sails-text 2px;
+  bottom: 70px;
+  margin: 5px 5px -50px 5px;
+  z-index: 2;
 }
 
 .playlist {
-  margin-top: 10px;;
-  width: 300px;
+  margin-top: 10px;
+  width: auto;
   height: 80px;
-}
-
-@media only screen and (max-width: 768){
-  .cardBody {
-    flex-direction: column;
-    width: auto;
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 1280px){
-  .description {
-    visibility: hidden;
-  }
 }
