@@ -9,6 +9,10 @@
             "stage": "STAGE A",
             "date": "VRIJDAG, 6 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/djbearsome/",
+            "instagram": "https://www.instagram.com/djbearsome/"
         }
     },
     {
@@ -21,6 +25,10 @@
             "stage": "STAGE A",
             "date": "VRIJDAG, 6 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/cheapcharlymen/",
+            "instagram": "https://www.instagram.com/cheapcharlymen/"
         }
     },
     {
@@ -33,6 +41,8 @@
             "stage": "STAGE A",
             "date": "VRIJDAG, 6 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
         }
     },
     {
@@ -45,6 +55,9 @@
             "stage": "STAGE A",
             "date": "VRIJDAG, 6 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/solcomusic/"
         }
     },
     {
@@ -57,6 +70,10 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/backyardgiants/",
+            "instagram": "https://www.instagram.com/backyard_giants_band/"
         }
     },
     {
@@ -69,6 +86,9 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/baltimoreofficial/"
         }
     },
     {
@@ -81,6 +101,10 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/Candlebagsmusic/",
+            "instagram": "https://www.instagram.com/candlebags_music/"
         }
     },
     {
@@ -93,6 +117,9 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/djdunya.official/"
         }
     },
     {
@@ -105,6 +132,9 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/Fourflake/"
         }
     },
     {
@@ -117,6 +147,10 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/mambelemusic/",
+            "instagram": "https://www.instagram.com/mambeats/"
         }
     },
     {
@@ -129,6 +163,10 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/copypastige/",
+            "instagram": "https://www.instagram.com/copypastige/"
         }
     },
     {
@@ -141,6 +179,9 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/The-Schmutz-150496554993252/"
         }
     },
     {
@@ -153,6 +194,9 @@
             "stage": "STAGE A",
             "date": "ZATERDAG, 7 SEPTEMBER",
             "time": "17:00 - 18:00"
+        },
+        "socials": {
+            "facebook": "https://www.facebook.com/Vermile/"
         }
     }
 ]

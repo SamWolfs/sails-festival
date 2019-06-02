@@ -13,7 +13,7 @@ import {
   faYoutube,
   faSpotify
 } from "@fortawesome/free-brands-svg-icons";
-import { far, faEnvelope, faMap } from "@fortawesome/free-regular-svg-icons";
+import { far, faEnvelope, faMap, faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
   fab,
@@ -24,7 +24,8 @@ library.add(
   faYoutube,
   faSpotify,
   faEnvelope,
-  faMap
+  faMap,
+  faQuestionCircle
 );
 
 const App: React.FC = () => {
