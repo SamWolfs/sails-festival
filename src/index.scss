@@ -1,10 +1,13 @@
-@import '_globals';
+$navbar-background-color: transparent;
 
-body {
-  background-image: url("assets/images/sails-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+@import '_globals';
+@import 'bulma';
+
+// body {
+//   background-image: url("assets/images/sails-bg.jpg");
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+// }
 
 body {
   margin: 0;
@@ -30,4 +33,8 @@ a, a:hover {
 .slick-slide {
   display: flex !important;
   justify-content: center;
+}
+
+.navbar-brand {
+  align-items: center !important;
 }

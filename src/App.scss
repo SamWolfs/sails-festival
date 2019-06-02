@@ -15,3 +15,34 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767px){
+  .Background {
+    background-image: url("assets/images/sails-bg.jpg");
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .Background {
+    background-image: url("assets/images/sails-bg.jpg");
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    z-index: -1;
+  }
+}
