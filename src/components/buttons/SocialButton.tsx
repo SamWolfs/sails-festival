@@ -6,14 +6,14 @@ export const SocialButton: React.FC<SocialButtonProps> = (button: SocialButtonPr
   const socialPlatforms = {
         facebook: ['fab','facebook-f'],
         twitter: ['fab','twitter'],
-        instagram: ['fab','instagram']
+        instagram: ['fab','instagram'],
+        undefined: ['far', 'question-circle']
   }
   const getIcon = (platform: SocialPlatform): IconProp => {
-      switch(platform) {
-          case SocialPlatform.Facebook: return ['fab','facebook-f'] as IconProp;
-          case SocialPlatform.Twitter: return ['fab','twitter'] as IconProp;
-          case SocialPlatform.Instagram: return ['fab','instagram'] as IconProp;
-      }
+    if (platform in socialPlatforms) {
+      return socialPlatforms[platform] as IconProp;
+    }
+    return socialPlatforms.undefined as IconProp;
   };
 
   return (
@@ -27,7 +27,8 @@ export interface SocialButtonProps {
 }
 
 export enum SocialPlatform {
-    Facebook,
-    Twitter,
-    Instagram
+    Facebook = 'facebook',
+    Twitter = 'twitter',
+    Instagram = 'instagram',
+    Undefined = 'undefined'
 }
