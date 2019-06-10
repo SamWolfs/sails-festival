@@ -40,7 +40,6 @@ export const ArtistCard = (props: ArtistCardProps) => {
           src={props.image}
         />
       </LazyLoad>
-
       <div className={styles.artistName}>{props.name}</div>
     </div>
   );

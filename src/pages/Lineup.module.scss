@@ -80,8 +80,7 @@
 .artistName {
   position: relative;
   color: $sails-text;
-  background: $sails-accent;
-  opacity: 0.6;
+  background-color: rgba(72, 77, 109, 0.6);
   width: 225px;
   font-size: 26px;
   border: solid $sails-text 2px;
@@ -94,4 +93,5 @@
   margin-top: 10px;
   width: auto;
   height: 80px;
+  background: black;
 }
