@@ -4,8 +4,6 @@ import { NavItem } from "./NavItem";
 import styles from "./Header.module.scss";
 
 export const Header = (props: HeaderProps) => {
-  // const [menuActive, setMenuActive] = React.useState(false);
-
   return (
     <header className={styles.container}>
       <nav className="navbar is-transparent">
