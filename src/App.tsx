@@ -14,6 +14,7 @@ import {
   faSpotify
 } from "@fortawesome/free-brands-svg-icons";
 import { far, faEnvelope, faMap, faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
+import { Artist } from "./pages/Artist";
 
 library.add(
   fab,
@@ -36,6 +37,7 @@ const App: React.FC = () => {
         <Layout>
           <Switch>
             <Route path="/home" component={Home} />
+            <Route path="/lineup/:artist" component={Artist} />
             <Route path="/lineup" component={Lineup} />
             <Route path="/" component={Home} />
           </Switch>

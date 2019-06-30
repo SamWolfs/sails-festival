@@ -7,22 +7,52 @@ import {
   SocialButton,
   SocialPlatform
 } from "../components/buttons/SocialButton";
+import enquire from "enquire.js";
+import { Link } from "react-router-dom";
 
 export const Lineup = (props: any) => {
+  type ArtistDetailType = "Desktop" | "Mobile";
+
   const initLineupDetail = (): ArtistProps | undefined => {
     let artist: ArtistProps | undefined;
     if (props.location.hash) {
-      artist = artists.find(artist => artist.key === props.location.hash.slice(1));
+      artist = artists.find(
+        artist => artist.key === props.location.hash.slice(1)
+      );
     }
 
     return artist;
-  }
+  };
 
-  const [selectedArtist, setSelectedArtist] = React.useState(initLineupDetail());
+  React.useEffect(() => {
+    enquire.register("screen and (max-width: 767px)", {
+      deferSetup: true,
+      match: () => {
+        setDetailType("Mobile");
+      }
+    });
+    enquire.register("screen and (min-width: 768px)", {
+      deferSetup: true,
+      match: () => {
+        setDetailType("Desktop");
+      }
+    });
+
+    return () => {
+      enquire.unregister("screen and (max-width: 767px)");
+      enquire.unregister("screen and (min-width: 768px)");
+    };
+  });
+
+  const [selectedArtist, setSelectedArtist] = React.useState(
+    initLineupDetail()
+  );
   const [selectedDay, setSelectedDay] = React.useState(" ");
+  const [detailType, setDetailType] = React.useState<ArtistDetailType>(
+    "Desktop"
+  );
 
   const selectArtist = (index: number) => {
-    console.log(props.location.hash);
     setSelectedArtist(artists[index]);
   };
 
@@ -40,7 +70,9 @@ export const Lineup = (props: any) => {
         </button>
         <button
           className={`button ${
-            selectedDay === "VRIJDAG" ? "is-primary is-selected" : "is-transparent"
+            selectedDay === "VRIJDAG"
+              ? "is-primary is-selected"
+              : "is-transparent"
           }`}
           onClick={() => setSelectedDay("VRIJDAG")}
         >
@@ -48,7 +80,9 @@ export const Lineup = (props: any) => {
         </button>
         <button
           className={`button ${
-            selectedDay === "ZATERDAG" ? "is-primary is-selected" : "is-transparent"
+            selectedDay === "ZATERDAG"
+              ? "is-primary is-selected"
+              : "is-transparent"
           }`}
           onClick={() => setSelectedDay("ZATERDAG")}
         >
@@ -61,11 +95,29 @@ export const Lineup = (props: any) => {
             .filter((artist: ArtistProps) =>
               artist.performance.date.includes(selectedDay)
             )
-            .map((artist: ArtistProps, index: number) => (
-              <ArtistCard index={index} {...artist} select={selectArtist} />
-            ))}
+            .map(
+              (artist: ArtistProps, index: number) =>
+                (detailType === "Desktop" && (
+                  <ArtistCard index={index} {...artist} select={selectArtist} />
+                )) ||
+                (detailType === "Mobile" && (
+                  <Link key={artist.key} to={`/lineup/${artist.key}`}>
+                    <ArtistCard
+                      index={index}
+                      {...artist}
+                      select={selectArtist}
+                    />
+                  </Link>
+                ))
+            )}
         </div>
-        {selectedArtist ? <ArtistDetail {...selectedArtist} /> : <></>}
+        {selectedArtist ? (
+          <div className={styles.artistDetailWrapper}>
+            <ArtistDetail {...selectedArtist} />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
@@ -79,6 +131,7 @@ export const ArtistCard = (props: ArtistCardProps) => {
           onClick={() => props.select(props.index)}
           className={styles.lineupImage}
           src={props.image}
+          alt={props.name}
         />
       </LazyLoad>
       <div className={styles.artistName}>{props.name}</div>
@@ -86,7 +139,7 @@ export const ArtistCard = (props: ArtistCardProps) => {
   );
 };
 
-const ArtistDetail = (props: ArtistProps) => {
+export const ArtistDetail = (props: ArtistProps) => {
   return (
     <div className={styles.detailContainer}>
       <h3>{props.name}</h3>
@@ -107,6 +160,7 @@ const ArtistDetail = (props: ArtistProps) => {
         {Object.keys(props.socials).map((key: string) => {
           return (
             <SocialButton
+              key={props.socials[key]}
               link={props.socials[key]}
               platform={key as SocialPlatform}
             />

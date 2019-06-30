@@ -14,7 +14,7 @@
     flex: 1;
   }
 
-  .detailContainer {
+  .artistDetailWrapper {
     width: 0;
     display: none;
   }
@@ -28,20 +28,25 @@
     flex: 1;
   }
 
-  .detailContainer {
-    border: 3px solid white;
-    color: white;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    max-height: 650px;
+  .artistDetailWrapper {
     position: sticky;
-    top: 50px;
-    z-index: 10;
-    width: 325px;
-    h3 {
-      font-size: 32px;
-    }
+    display: flex;
+  }
+}
+
+.detailContainer {
+  border: 3px solid white;
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  max-height: 650px;
+  position: sticky;
+  top: 50px;
+  z-index: 10;
+  width: 325px;
+  h3 {
+    font-size: 32px;
   }
 }
 
