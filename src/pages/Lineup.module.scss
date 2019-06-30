@@ -1,4 +1,4 @@
-@import 'src/_globals';
+@import "src/_globals";
 
 .title {
   text-align: left;
@@ -34,7 +34,7 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    max-height: 650px;
     position: sticky;
     top: 50px;
     z-index: 10;

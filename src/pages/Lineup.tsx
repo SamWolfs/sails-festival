@@ -8,21 +8,62 @@ import {
   SocialPlatform
 } from "../components/buttons/SocialButton";
 
-export const Lineup = () => {
-  const [selectedArtist, setSelectedArtist] = React.useState(artists[0]);
+export const Lineup = (props: any) => {
+  const initLineupDetail = (): ArtistProps | undefined => {
+    let artist: ArtistProps | undefined;
+    if (props.location.hash) {
+      artist = artists.find(artist => artist.key === props.location.hash.slice(1));
+    }
+
+    return artist;
+  }
+
+  const [selectedArtist, setSelectedArtist] = React.useState(initLineupDetail());
+  const [selectedDay, setSelectedDay] = React.useState(" ");
 
   const selectArtist = (index: number) => {
+    console.log(props.location.hash);
     setSelectedArtist(artists[index]);
   };
 
   return (
     <>
       <div className={styles.title}>Lineup</div>
+      <div className="buttons has-addons">
+        <button
+          className={`button ${
+            selectedDay === " " ? "is-primary is-selected" : "is-transparent"
+          }`}
+          onClick={() => setSelectedDay(" ")}
+        >
+          All
+        </button>
+        <button
+          className={`button ${
+            selectedDay === "VRIJDAG" ? "is-primary is-selected" : "is-transparent"
+          }`}
+          onClick={() => setSelectedDay("VRIJDAG")}
+        >
+          Friday
+        </button>
+        <button
+          className={`button ${
+            selectedDay === "ZATERDAG" ? "is-primary is-selected" : "is-transparent"
+          }`}
+          onClick={() => setSelectedDay("ZATERDAG")}
+        >
+          Saturday
+        </button>
+      </div>
       <div className={styles.pageContainer}>
         <div className={styles.container}>
-          {artists.map((artist: ArtistProps, index: number) => (
-            <ArtistCard index={index} {...artist} select={selectArtist} />
-          ))}
+          {artists
+            .filter((artist: ArtistProps) =>
+              artist.performance.date.includes(selectedDay)
+            )
+            .map((artist: ArtistProps, index: number) => (
+              <ArtistCard index={index} {...artist} select={selectArtist} />
+            ))}
         </div>
         {selectedArtist ? <ArtistDetail {...selectedArtist} /> : <></>}
       </div>
@@ -75,6 +116,10 @@ const ArtistDetail = (props: ArtistProps) => {
     </div>
   );
 };
+
+export interface LineupProps {
+  artist?: string;
+}
 
 export interface ArtistProps {
   key: string;
