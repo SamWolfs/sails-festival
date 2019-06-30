@@ -8,7 +8,7 @@ export const SailsLogo = () => {
   return (
     <div>
       <Link to="/home">
-        <img className={styles.brandLogo} src={logo} alt="" />
+        {/* <img className={styles.brandLogo} src={logo} alt="" /> */}
         <img className={styles.brandName} src={name} alt="Sails" />
       </Link>
     </div>
