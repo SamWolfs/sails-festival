@@ -1,24 +1,35 @@
-@import 'src/_globals';
+@import "src/_globals";
+
+
 
 .navItem {
-    margin-left: 10px;
-    margin-right: 10px;
-}
+  margin-left: 10px;
+  margin-right: 10px;
 
-.navItem > a::after {
+  a::after {
     display: block;
-    content: '';
+    content: "";
     height: 2px;
     width: 0;
     background: transparent;
-    transition: width .5s ease, background-color .5s ease;
-}
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
 
-.navItem > a:hover::after {
+  a:hover::after {
     width: 100%;
     background: $sails-text;
-}
+  }
 
-.linkActive {
-    color: $sails-secondary;
+  .linkActive {
+    color: $sails-dark-primary;
+  
+    &::after {
+      width: 100%;
+      background: $sails-dark-primary !important;
+    }
+  
+    &:hover {
+      color: $sails-dark-primary;
+    }
+  }
 }
