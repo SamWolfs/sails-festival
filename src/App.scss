@@ -32,6 +32,10 @@ main {
     width: 100%;
     z-index: -1;
   }
+
+  .buttons {
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 768px){
@@ -44,5 +48,9 @@ main {
     transition: opacity 1s ease-in-out;
     width: 100%;
     z-index: -1;
+  }
+
+  .buttons {
+    justify-content: flex-start;
   }
 }
