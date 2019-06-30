@@ -13,11 +13,19 @@
   .bannerContainer {
     flex-direction: column;
   }
+
+  .bannerInfo {
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 768px){
   .container {
     flex-direction: row;
+  }
+
+  .bannerInfo {
+    text-align: start;
   }
 }
 
@@ -42,7 +50,6 @@
 
 .bannerInfo {
   line-height: 1;
-  text-align: start;
   font-size: 20px;
 }
 

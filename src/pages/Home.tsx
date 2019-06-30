@@ -7,6 +7,9 @@ import artists from "../assets/data/lineup.json";
 import sponsors from "../assets/data/sponsors.json";
 import playlists from "../assets/data/playlists.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ArtistProps } from "./Lineup";
+import { Link } from "react-router-dom";
+import enquire from "enquire.js";
 
 export const Home = () => {
   return (
@@ -31,14 +34,13 @@ const Banner = () => {
       <div className={styles.bannerContainer}>
         <div className={styles.bannerColumn}>
           <img className={styles.bannerLogo} src={logo} />
-          {/* <h1 className={styles.bannerTitle}>Sails</h1> */}
         </div>
         <div className={styles.bannerColumn}>
           <div className={styles.bannerInfo}>OUTDOOR MUSIC FESTIVAL</div>
           <div className={styles.bannerInfo}>
             6 &amp; 7 SEPTEMBER OPHOVEN, BE
           </div>
-          <div className={styles.bannerInfo}>3 STAGES</div>
+          {/* <div className={styles.bannerInfo}>3 STAGES</div> */}
         </div>
       </div>
     </>
@@ -46,6 +48,19 @@ const Banner = () => {
 };
 
 const LineupCarousel = () => {
+  const [urlSeparator, setUrlSeparator] = React.useState("/");
+  enquire.register("screen and (max-width: 767px)", {
+    deferSetup : true,
+    match: () => {
+      if (urlSeparator != "/") setUrlSeparator("/");
+    }
+  });
+  enquire.register("screen and (min-width: 768px)", {
+    deferSetup : true,
+    match: () => {
+      if (urlSeparator != "#") setUrlSeparator("#");
+    }
+  });
   const settings = {
     dots: false,
     infinite: true,
@@ -89,15 +104,20 @@ const LineupCarousel = () => {
   };
   return (
     <Slider className={styles.lineupCarousel} {...settings}>
-      {artists.map((artist: PolaroidProps) => (
-        <Polaroid key={artist.name} name={artist.name} image={artist.image} />
-      ))}
+      {artists.map((artist: ArtistProps) => {
+        const link = `/lineup${urlSeparator}${artist.key}`;
+        return (
+          <Link key={artist.name} to={link}>
+            <Polaroid name={artist.name} image={artist.image} />
+          </Link>
+        );
+      })}
     </Slider>
   );
 };
 
 const Playlist = () => {
-  const [currentTab, setCurrentTab] = React.useState('youtube');
+  const [currentTab, setCurrentTab] = React.useState("youtube");
   const sailsPlaylists: PlaylistItem = playlists;
   const switchTab = (tab: string, e: any) => {
     if (tab in playlists && tab !== currentTab) {
@@ -109,14 +129,14 @@ const Playlist = () => {
     <div className={styles.playlistContainer}>
       <div className={`tabs is-centered is-medium ${styles.tabsContainer}`}>
         <ul>
-          <li className={currentTab === 'youtube' ? 'is-active' : ''}>
-            <a onClick={(e) => switchTab('youtube', e)}>
+          <li className={currentTab === "youtube" ? "is-active" : ""}>
+            <a onClick={e => switchTab("youtube", e)}>
               <FontAwesomeIcon icon={["fab", "youtube"]} />
               <span>Youtube</span>
             </a>
           </li>
-          <li className={currentTab === 'spotify' ? 'is-active' : ''}>
-            <a onClick={(e) => switchTab('spotify', e)}>
+          <li className={currentTab === "spotify" ? "is-active" : ""}>
+            <a onClick={e => switchTab("spotify", e)}>
               <FontAwesomeIcon icon={["fab", "spotify"]} />
               <span>Spotify</span>
             </a>
