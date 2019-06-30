@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className={`level is-mobile ${styles.container}`}>
         <div className="level-item">
           {socialPlatforms.map((button: SocialButtonProps) => {
-            return <SocialButton {...button} />
+            return <SocialButton key={button.platform} {...button} />
           })}
         </div>
         <div className="level-item">

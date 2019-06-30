@@ -1,7 +1,7 @@
 import * as React from "react";
 import logo from "../assets/images/sails-logo.png";
 import styles from "./Home.module.scss";
-import { Polaroid, PolaroidProps } from "../components/Polaroid";
+import { Polaroid } from "../components/Polaroid";
 import Slider from "react-slick";
 import artists from "../assets/data/lineup.json";
 import sponsors from "../assets/data/sponsors.json";
@@ -49,18 +49,27 @@ const Banner = () => {
 
 const LineupCarousel = () => {
   const [urlSeparator, setUrlSeparator] = React.useState("/");
-  enquire.register("screen and (max-width: 767px)", {
-    deferSetup : true,
-    match: () => {
-      if (urlSeparator != "/") setUrlSeparator("/");
+
+  React.useEffect(() => {
+    enquire.register("screen and (max-width: 767px)", {
+      deferSetup: true,
+      match: () => {
+        if (urlSeparator !== "/") setUrlSeparator("/");
+      }
+    });
+    enquire.register("screen and (min-width: 768px)", {
+      deferSetup: true,
+      match: () => {
+        if (urlSeparator !== "#") setUrlSeparator("#");
+      }
+    });
+
+    return () => {
+      enquire.unregister("screen and (max-width: 767px)");
+      enquire.unregister("screen and (min-width: 768px)");
     }
   });
-  enquire.register("screen and (min-width: 768px)", {
-    deferSetup : true,
-    match: () => {
-      if (urlSeparator != "#") setUrlSeparator("#");
-    }
-  });
+
   const settings = {
     dots: false,
     infinite: true,
