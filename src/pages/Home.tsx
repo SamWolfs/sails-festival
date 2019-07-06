@@ -67,7 +67,7 @@ const LineupCarousel = () => {
     return () => {
       enquire.unregister("screen and (max-width: 767px)");
       enquire.unregister("screen and (min-width: 768px)");
-    }
+    };
   });
 
   const settings = {
@@ -172,7 +172,7 @@ const SponsorCarousel = () => {
     speed: 500,
     autoplay: true,
     lazyload: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 1500,
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
@@ -210,11 +210,12 @@ const SponsorCarousel = () => {
   return (
     <Slider {...settings}>
       {sponsors.map((sponsor: SponsorProps, index: number) => {
-        let offset = index % 2 === 0 ? "0 20px 0 0" : "0px";
         return (
-          <a key={sponsor.name} style={{ margin: offset }} href={sponsor.url}>
-            <img src={sponsor.logo} alt={sponsor.name} />
-          </a>
+          <div key={sponsor.name} className={styles.sponsorCard}>
+            <a href={sponsor.url} target="_blank">
+              <img src={sponsor.logo} alt={sponsor.name} />
+            </a>
+          </div>
         );
       })}
     </Slider>

@@ -106,3 +106,19 @@
   height: 360px;
   width: 640px;
 }
+
+.sponsorCard {
+  display: flex !important;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+
+  a {
+    margin: 10px;
+
+    img {
+      max-height: 280px;
+      width: auto;
+    }
+  }
+}
