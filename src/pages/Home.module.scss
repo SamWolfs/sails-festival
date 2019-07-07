@@ -2,8 +2,7 @@
 
 .bannerContainer {
   color: $sails-text;
-  margin: 100px 0px;
-  height: 200px;
+  height: calc(100vh - 82px);
   display: flex;
   flex-direction: row;
   justify-content: center;

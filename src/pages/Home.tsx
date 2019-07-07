@@ -15,6 +15,7 @@ export const Home = () => {
   return (
     <>
       <Banner />
+      <Separator />
       <Subtitle text="The Artists" />
       <LineupCarousel />
       <Separator />
@@ -40,8 +41,12 @@ const Banner = () => {
           <div className={styles.bannerInfo}>
             6 &amp; 7 SEPTEMBER OPHOVEN, BE
           </div>
-          {/* <div className={styles.bannerInfo}>3 STAGES</div> */}
         </div>
+      </div>
+      <div>
+        <video width="100%" height="auto" controls>
+          <source src="sails-movie.mp4" type="video/mp4" />
+        </video>
       </div>
     </>
   );
