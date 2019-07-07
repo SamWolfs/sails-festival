@@ -52,8 +52,8 @@ export const Lineup = (props: any) => {
     "Desktop"
   );
 
-  const selectArtist = (index: number) => {
-    setSelectedArtist(artists[index]);
+  const selectArtist = (key: string) => {
+    setSelectedArtist(artists.find(artist => artist.key === key));
   };
 
   return (
@@ -96,14 +96,14 @@ export const Lineup = (props: any) => {
               artist.performance.date.includes(selectedDay)
             )
             .map(
-              (artist: ArtistProps, index: number) =>
+              (artist: ArtistProps) =>
                 (detailType === "Desktop" && (
-                  <ArtistCard index={index} {...artist} select={selectArtist} />
+                  <ArtistCard key={artist.key} artistKey={artist.key} {...artist} select={selectArtist} />
                 )) ||
                 (detailType === "Mobile" && (
                   <Link key={artist.key} to={`/lineup/${artist.key}`}>
                     <ArtistCard
-                      index={index}
+                      artistKey={artist.key}
                       {...artist}
                       select={selectArtist}
                     />
@@ -123,18 +123,20 @@ export const Lineup = (props: any) => {
   );
 };
 
-export const ArtistCard = (props: ArtistCardProps) => {
+export const ArtistCard = (artist: ArtistCardProps) => {
   return (
-    <div className={styles.artistContainer}>
+    <div
+      className={styles.artistContainer}
+      onClick={() => artist.select(artist.artistKey)}
+    >
       <LazyLoad height={275} width={275} offset={700}>
         <img
-          onClick={() => props.select(props.index)}
           className={styles.lineupImage}
-          src={props.image}
-          alt={props.name}
+          src={artist.image}
+          alt={artist.name}
         />
       </LazyLoad>
-      <div className={styles.artistName}>{props.name}</div>
+      <div className={styles.artistName}>{artist.name}</div>
     </div>
   );
 };
@@ -186,8 +188,7 @@ export interface ArtistProps {
 }
 
 export interface ArtistCardProps {
-  index: number;
-  key: string;
+  artistKey: string;
   name: string;
   description: string;
   image: string;
