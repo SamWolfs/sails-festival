@@ -27,6 +27,7 @@ export const Header = (props: HeaderProps) => {
           <div className="navbar-end">
             <NavItem title="Home" route="/home" />
             <NavItem title="Lineup" route="/lineup" />
+            <NavItem title="About" route="/about" />
           </div>
         </div>
       </nav>
