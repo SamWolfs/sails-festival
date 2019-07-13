@@ -149,6 +149,7 @@ export const ArtistDetail = (props: ArtistProps) => {
       <Performance {...props.performance} />
       {props.playlist ? (
         <iframe
+          title={`${props.key}-playlist`}
           className={styles.playlist}
           src={props.playlist}
           width="300"

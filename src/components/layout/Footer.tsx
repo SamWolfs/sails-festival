@@ -19,7 +19,7 @@ export const Footer = () => {
           })}
         </div>
         <div className="level-item">
-          <a href="www.sailsfestival.be"><img className={styles.logo} src={logo} /></a>
+          <a href="/home"><img className={styles.logo} src={logo} alt="sails-logo" /></a>
         </div>
         <div className="level-item">
           <FAwesomeButton link="mailto:organisatie@sailsfestival.be" icon={['far', 'envelope']} />

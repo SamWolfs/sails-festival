@@ -34,7 +34,7 @@ const Banner = () => {
     <>
       <div className={styles.bannerContainer}>
         <div className={styles.bannerColumn}>
-          <img className={styles.bannerLogo} src={logo} />
+          <img className={styles.bannerLogo} src={logo} alt="sails-logo" />
         </div>
         <div className={styles.bannerColumn}>
           <div className={styles.bannerInfo}>OUTDOOR MUSIC FESTIVAL</div>
@@ -144,13 +144,13 @@ const Playlist = () => {
       <div className={`tabs is-centered is-medium ${styles.tabsContainer}`}>
         <ul>
           <li className={currentTab === "youtube" ? "is-active" : ""}>
-            <a onClick={e => switchTab("youtube", e)}>
+            <a href="#" onClick={e => switchTab("youtube", e)}>
               <FontAwesomeIcon icon={["fab", "youtube"]} />
               <span>Youtube</span>
             </a>
           </li>
           <li className={currentTab === "spotify" ? "is-active" : ""}>
-            <a onClick={e => switchTab("spotify", e)}>
+            <a href="#" onClick={e => switchTab("spotify", e)}>
               <FontAwesomeIcon icon={["fab", "spotify"]} />
               <span>Spotify</span>
             </a>
@@ -159,6 +159,7 @@ const Playlist = () => {
       </div>
       <div>
         <iframe
+          title={`${currentTab}-playlist`}
           className={styles.ytPlayer}
           id="ytplayer"
           width="640px"
@@ -217,7 +218,7 @@ const SponsorCarousel = () => {
       {sponsors.map((sponsor: SponsorProps, index: number) => {
         return (
           <div key={sponsor.name} className={styles.sponsorCard}>
-            <a href={sponsor.url} target="_blank">
+            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
               <img src={sponsor.logo} alt={sponsor.name} />
             </a>
           </div>
