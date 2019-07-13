@@ -9,6 +9,7 @@ import {
 } from "../components/buttons/SocialButton";
 import enquire from "enquire.js";
 import { Link } from "react-router-dom";
+import Helmet from "react-helmet";
 
 export const Lineup = (props: any) => {
   type ArtistDetailType = "Desktop" | "Mobile";
@@ -58,6 +59,13 @@ export const Lineup = (props: any) => {
 
   return (
     <>
+      <Helmet>
+        <title>Sails 2019 | Lineup</title>
+        <meta
+          name="description"
+          content={`Sails Festival 2019, Maasplassen van Ophoven. Lineup: ${artists.map(artist => artist.name).join(', ')}`}
+        />
+      </Helmet>
       <div className={styles.title}>Lineup</div>
       <div className="buttons has-addons">
         <button
@@ -98,7 +106,12 @@ export const Lineup = (props: any) => {
             .map(
               (artist: ArtistProps) =>
                 (detailType === "Desktop" && (
-                  <ArtistCard key={artist.key} artistKey={artist.key} {...artist} select={selectArtist} />
+                  <ArtistCard
+                    key={artist.key}
+                    artistKey={artist.key}
+                    {...artist}
+                    select={selectArtist}
+                  />
                 )) ||
                 (detailType === "Mobile" && (
                   <Link key={artist.key} to={`/lineup/${artist.key}`}>

@@ -2,6 +2,7 @@ import * as React from "react";
 import { ArtistDetail } from "./Lineup";
 import artists from "../assets/data/lineup.json";
 import styles from "./Artist.module.scss";
+import { Helmet } from "react-helmet";
 
 export const Artist = (props: any) => {
   const getArtist = () => {
@@ -14,8 +15,15 @@ export const Artist = (props: any) => {
   const [artist, setArtist] = React.useState(getArtist());
 
   return (
-    <div className={styles.pageContainer}>
-      <ArtistDetail {...artist} />
-    </div>
+    <>
+    <Helmet>
+      <title>{artist.name}</title>
+      <meta name="description" content={artist.description} />
+      <meta name="og:image" content={artist.image} />
+    </Helmet>
+      <div className={styles.pageContainer}>
+        <ArtistDetail {...artist} />
+      </div>
+    </>
   );
 };

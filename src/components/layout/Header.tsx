@@ -11,7 +11,6 @@ export const Header = (props: HeaderProps) => {
           <SailsLogo />
           <a
             onClick={props.toggleMenu}
-            href="#"
             role="button"
             className={`navbar-burger ${props.expanded ? 'is-active' : ''}`}
             aria-label="menu"
