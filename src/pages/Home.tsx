@@ -136,7 +136,7 @@ const LineupCarousel = () => {
 };
 
 const Playlist = () => {
-  const [currentTab, setCurrentTab] = React.useState("youtube");
+  const [currentTab, setCurrentTab] = React.useState("soundcloud");
   const sailsPlaylists: PlaylistItem = playlists;
   const switchTab = (tab: string, e: any) => {
     if (tab in playlists && tab !== currentTab) {
@@ -148,10 +148,10 @@ const Playlist = () => {
     <div className={styles.playlistContainer}>
       <div className={`tabs is-centered is-medium ${styles.tabsContainer}`}>
         <ul>
-          <li className={currentTab === "youtube" ? "is-active" : ""}>
-            <a onClick={e => switchTab("youtube", e)}>
-              <FontAwesomeIcon icon={["fab", "youtube"]} />
-              <span>Youtube</span>
+          <li className={currentTab === "soundcloud" ? "is-active" : ""}>
+            <a onClick={e => switchTab("soundcloud", e)}>
+              <FontAwesomeIcon icon={["fab", "soundcloud"]} />
+              <span>Soundcloud</span>
             </a>
           </li>
           <li className={currentTab === "spotify" ? "is-active" : ""}>
