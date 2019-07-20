@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  flex:1;
+  flex: 1;
   justify-content: center;
 }
 
@@ -21,7 +21,7 @@ main {
   flex-direction: column;
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   .Background {
     background-image: url("assets/images/sails-bg.jpg");
     height: 100%;
@@ -38,7 +38,7 @@ main {
   }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .Background {
     background-image: url("assets/images/sails-bg.jpg");
     height: 100%;
@@ -52,5 +52,9 @@ main {
 
   .buttons {
     justify-content: flex-start;
+  }
+
+  .navbar-end {
+    align-items: center;
   }
 }

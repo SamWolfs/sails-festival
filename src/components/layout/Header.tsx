@@ -25,9 +25,10 @@ export const Header = (props: HeaderProps) => {
         <div className={`navbar-menu ${props.expanded ? 'is-active' : ''}`}>
           <div className="navbar-start" />
           <div className="navbar-end">
-            <NavItem title="Home" route="/home" />
-            <NavItem title="Lineup" route="/lineup" />
-            <NavItem title="About" route="/about" />
+            <NavItem title="Home" route="/home" onClick={props.toggleMenu} />
+            <NavItem title="Lineup" route="/lineup" onClick={props.toggleMenu} />
+            <NavItem title="About" route="/about" onClick={props.toggleMenu} />
+            <a href="https://entrytickets.be/sails/festival?fbclid=IwAR1IgEbfJ3krn0P2jUOxEHQt9Lhqwl30uqzR9p3L6ty_6IueRRXf8-TadfQ" className="button is-primary is-inverted is-rounded">Tickets</a>
           </div>
         </div>
       </nav>
