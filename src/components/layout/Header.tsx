@@ -28,7 +28,7 @@ export const Header = (props: HeaderProps) => {
             <NavItem title="Home" route="/home" onClick={props.toggleMenu} />
             <NavItem title="Lineup" route="/lineup" onClick={props.toggleMenu} />
             <NavItem title="About" route="/about" onClick={props.toggleMenu} />
-            <a href="https://entrytickets.be/sails/festival?fbclid=IwAR1IgEbfJ3krn0P2jUOxEHQt9Lhqwl30uqzR9p3L6ty_6IueRRXf8-TadfQ" className="button is-primary is-inverted is-rounded">Tickets</a>
+            <a style={{ marginLeft: '10px' }} href="https://entrytickets.be/sails/festival?fbclid=IwAR1IgEbfJ3krn0P2jUOxEHQt9Lhqwl30uqzR9p3L6ty_6IueRRXf8-TadfQ" className="button is-primary is-inverted is-rounded">Tickets</a>
           </div>
         </div>
       </nav>
