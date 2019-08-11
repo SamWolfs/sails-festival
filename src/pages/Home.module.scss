@@ -121,3 +121,18 @@
     }
   }
 }
+
+.ticketsContainer {
+  text-align: left;
+  font-size: 1.2em;
+
+  a {
+    font-weight: 600;
+  }
+
+  ul {
+    margin-top: 10px;
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+}

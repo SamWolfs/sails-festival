@@ -39,7 +39,12 @@ export const About = (props: any) => {
             menigte helemaal te laten losgaan op swingende muziek. Daar stopt
             het natuurlijk niet bij, op zaterdag bemannen talentvolle artiesten
             (Mambele, Fourflake, Vermile, Pastige) het ‘bosje’ waar funky
-            elektronische muziek in het thema staat.
+            elektronische muziek in het thema staat. Sails wordt mede
+            georganiseerd door zeescouting Pebbles. Het festival vindt plaats op
+            het terrein van de scouting group en biedt een directe toegang tot
+            de maasplassen. Elke lekker pint of frisse cocktail wordt dan ook
+            voorgeschoteld door iemand met een passie voor zeilen, scouts, jeugd
+            en deze ontzettend mooie streek.
           </p>
           <div className={styles.subtitle}>
             <h4 className="is-size-4">When</h4>
