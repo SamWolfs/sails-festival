@@ -15,6 +15,17 @@ export const About = (props: any) => {
       <div className={styles.pageContainer}>
         <div className={styles.colContainer}>
           <div className={styles.subtitle}>
+            <h4 className="is-size-4">Who</h4>
+            <hr />
+          </div>
+          <p className={styles.description}>
+            Sails wordt mede georganiseerd door zeescouting Pebbles. Het
+            festival vindt plaats op het terrein van de scouting group en biedt
+            een directe toegang tot de maasplassen. Elke lekker pint of frisse
+            cocktail wordt dan ook voorgeschoteld door iemand met een passie
+            voor zeilen, scouts, jeugd en deze ontzettend mooie streek.
+          </p>
+          <div className={styles.subtitle}>
             <h4 className="is-size-4">What</h4>
             <hr />
           </div>
@@ -39,13 +50,10 @@ export const About = (props: any) => {
             menigte helemaal te laten losgaan op swingende muziek. Daar stopt
             het natuurlijk niet bij, op zaterdag bemannen talentvolle artiesten
             (Mambele, Fourflake, Vermile, Pastige) het ‘bosje’ waar funky
-            elektronische muziek in het thema staat. Sails wordt mede
-            georganiseerd door zeescouting Pebbles. Het festival vindt plaats op
-            het terrein van de scouting group en biedt een directe toegang tot
-            de maasplassen. Elke lekker pint of frisse cocktail wordt dan ook
-            voorgeschoteld door iemand met een passie voor zeilen, scouts, jeugd
-            en deze ontzettend mooie streek.
+            elektronische muziek in het thema staat.
           </p>
+        </div>
+        <div className={styles.colContainer}>
           <div className={styles.subtitle}>
             <h4 className="is-size-4">When</h4>
             <hr />
@@ -53,8 +61,6 @@ export const About = (props: any) => {
           <p className={styles.description}>
             Vrijdag 6 en Zaterdag 7 september 2019
           </p>
-        </div>
-        <div className={styles.colContainer}>
           <div className={styles.subtitle}>
             <h4 className="is-size-4">Where</h4>
             <hr />
@@ -67,8 +73,6 @@ export const About = (props: any) => {
               src="https://www.google.com/maps/embed/v1/place?q=place_id:EiFEYWxlcndlZyAzLCAzNjQwIEtpbnJvb2ksIEJlbGdpdW0iMBIuChQKEgmrtPY73cvARxEbKB6HSAW1pBADKhQKEgm_HqQu3cvARxE-5QSjz5GAHQ&key=AIzaSyA_ezpAtMwnAhQYwRPrJlk11pwFuYZCZaQ"
             />
           </div>
-
-          <div className={styles.contact} />
         </div>
       </div>
     </>

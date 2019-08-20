@@ -63,9 +63,9 @@
     {
         "key": "bixbite",
         "name": "Bixbite",
-        "description": "",
-        "image": "",
-        "playlist": "",
+        "description": "Funky energieke DJ uit Limburg die momenteel ervaringen op doet in Brussel.  Experimenteert graag met muziekstijlen maar blijft toch vaak terug grijpen naar de '80s.",
+        "image": "https://drive.google.com/uc?export=view&id=18Mi8ZT5PmbpDy_lxdbcN8QzTcmF9uMFm",
+        "playlist": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/667612391&color=%231c1520",
         "performance": {
             "stage": "STAGE A",
             "date": "VRIJDAG, 6 SEPTEMBER",
