@@ -193,8 +193,8 @@ const Tickets = () => {
         , Rooske of Café Beej Nelis.
       </p>
       <ul>
-        <li>Vrijdag 7 september: €8</li>
-        <li>Zaterdag 8 september: €12</li>
+        <li>Vrijdag 6 september: €8</li>
+        <li>Zaterdag 7 september: €12</li>
         <li>Combi: €15</li>
       </ul>
     </div>
