@@ -1,0 +1,12 @@
+.pageContainer {
+  min-height: calc(100vh - 197px);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: left;
+  color: white;
+  font-size: 3em;
+  padding: 0 0 2em 0px;
+}

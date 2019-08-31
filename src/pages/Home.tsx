@@ -192,10 +192,17 @@ const Tickets = () => {
         </a>
         , Rooske of Café Beej Nelis.
       </p>
+      <p>VVK</p>
       <ul>
         <li>Vrijdag 6 september: €8</li>
         <li>Zaterdag 7 september: €12</li>
         <li>Combi: €15</li>
+      </ul>
+      <p>ADK</p>
+      <ul>
+        <li>Vrijdag 6 september: €10</li>
+        <li>Zaterdag 7 september: €15</li>
+        <li>Combi: €20</li>
       </ul>
     </div>
   );
