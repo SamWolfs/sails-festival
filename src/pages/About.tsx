@@ -59,18 +59,19 @@ export const About = (props: any) => {
             <hr />
           </div>
           <p className={styles.description}>
-            Vrijdag 6 en Zaterdag 7 september 2019
+            Vrijdag 6 september 2019, 18u00 - 02u00 <br /> 
+            Zaterdag 7 september 2019, 17u00 - 02u00
           </p>
           <div className={styles.subtitle}>
             <h4 className="is-size-4">Where</h4>
             <hr />
           </div>
           <div className={styles.mapsContainer}>
-            <iframe
+            <img
               title="map"
-              width="600"
+              width="450"
               height="450"
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:EiFEYWxlcndlZyAzLCAzNjQwIEtpbnJvb2ksIEJlbGdpdW0iMBIuChQKEgmrtPY73cvARxEbKB6HSAW1pBADKhQKEgm_HqQu3cvARxE-5QSjz5GAHQ&key=AIzaSyA_ezpAtMwnAhQYwRPrJlk11pwFuYZCZaQ"
+              src="http://drive.google.com/uc?export=view&amp;id=10BkRuJcc8D8Jh8qRR2AL-t_pL99o_4CO"
             />
           </div>
         </div>
